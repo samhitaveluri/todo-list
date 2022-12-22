@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+* {
+   margin:0;
+	  box-sizing: border-box;
+}
+h1 {
+ font-family: 'Poppins', sans-serif;
+ background-image: linear-gradient(to right, var(--pink), var(--purple));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-size: 10rem;
+}
+body {
+  background-color: #d0c7d0;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  margin: 0;
+	min-height: 100vh;
+	color:#423742;
+}
+#new-task-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color:#423742;
+	padding:1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+}
+
+#new-task-input::placeholder {
+	color: #a896a7;
+	opacity: 0.5;
+}
+
+#new-task-submit {
+	color: var(--light)
+	font-size: 1.25rem;
+  border-radius: 25%;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 0.5rem;
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+	color: #a896a7;
+	margin-bottom: 1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color:#423742;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: #FFD700;
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .done {
+	 color: var(--pink);
+}
+
+
+.task .actions .edit {
+	 color: var(--purple);
+}
+
+.task .actions .delete {
+	color: crimson;
+}
